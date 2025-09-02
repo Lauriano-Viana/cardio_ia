@@ -114,6 +114,7 @@ Esta parte do projeto lida com dados não estruturados na forma de textos. O obj
     * **Texto de Saúde Pública:** [Ministério da Saúde - Ataque Cardíaco](http://bvsms.saude.gov.br/dicas-em-saude/2779-ataque-cardiaco-infarto)
     * **🔗 Link para o Arquivo:** 
         **[texto_clinico_01.txt](docs/texto_clinico_01.txt)**
+        
         **[texto_saudepublica_02.txt](docs/texto_saudepublica_02.txt)**
 
 
