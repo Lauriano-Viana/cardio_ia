@@ -113,9 +113,7 @@ Esta parte do projeto lida com dados não estruturados na forma de textos. O obj
     * **Texto Clínico:** [Diretrizes Brasileiras de Hipertensão Arterial - SciELO](https://www.scielo.br/j/abc/a/Z6m5gGNQCvrW3WLV7csqbqh/?lang=pt)
     * **Texto de Saúde Pública:** [Ministério da Saúde - Ataque Cardíaco](http://bvsms.saude.gov.br/dicas-em-saude/2779-ataque-cardiaco-infarto)
     * **🔗 Link para o Arquivo:**
-
-            **[texto_clinico_01.txt](docs/texto_clinico_01.txt)**
-        
+            **[texto_clinico_01.txt](docs/texto_clinico_01.txt)**        
             **[texto_saudepublica_02.txt](docs/texto_saudepublica_02.txt)**
 
 
@@ -216,7 +214,7 @@ Esta seção é dedicada à coleta de imagens de exames cardiológicos, a matér
         **[Imagens de Raio-X Torácico](https://drive.google.com/drive/folders/1Hi_ObZ0Vgg4QNZA1rOccGyzkBFApNtsn?usp=drive_link)**
 
         **[Imagens de Angiograma Coronário](https://drive.google.com/drive/folders/19wAqXGRr-Sx5h909gH4pZhW8MwC4SoOt?usp=drive_link)**
-        
+
         **[Imagens de Eletrocardiograma (ECG)](https://drive.google.com/drive/folders/1FgA_sDv7jY53sg5c64__gpLbNS8qM9pN?usp=drive_link)**
 
 
