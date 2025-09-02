@@ -22,7 +22,9 @@ Esta seção foca em dados estruturados, tipicamente provenientes de exames clí
 * **Fonte Principal:**
     * **Dataset:** Heart Disease UCI
     * **Link:** [Kaggle - Heart Disease Data](https://www.kaggle.com/datasets/redwankarimsony/heart-disease-data)
-* **Ferramentas Utilizadas:** Python, Pandas, Matplotlib, Seaborn.
+    * **🔗 Link para o Arquivo:** 
+        **[heart_disease_uci.csv](https://drive.google.com/file/d/1Sam6ql00rbkOIR3cT5IARnHoySZr4d_7/view?usp=drive_link)**
+
 
 Análise do dataset UCI Heart Disease Data
 
@@ -110,6 +112,9 @@ Esta parte do projeto lida com dados não estruturados na forma de textos. O obj
 * **Fontes Principais:**
     * **Texto Clínico:** [Diretrizes Brasileiras de Hipertensão Arterial - SciELO](https://www.scielo.br/j/abc/a/Z6m5gGNQCvrW3WLV7csqbqh/?lang=pt)
     * **Texto de Saúde Pública:** [Ministério da Saúde - Ataque Cardíaco](http://bvsms.saude.gov.br/dicas-em-saude/2779-ataque-cardiaco-infarto)
+    * **🔗 Link para o Arquivo:** 
+        **[texto_clinico_01.txt](docs/texto_clinico_01.txt)**
+        **[texto_saudepublica_02.txt](docs/texto_saudepublica_02.txt)**
 
 
 ## 🧠 Como Algoritmos de NLP Exploram os Textos e Por Que Isso é Relevante
@@ -193,7 +198,7 @@ Em resumo, ao integrar o NLP, seu projeto **CardioIA** evolui. Ele deixa de ser 
 ---
 
 
-## 🖼️ Parte 3 – Dados Visuais (Visão Computacional - VC)
+# 🖼️ Parte 3 – Dados Visuais (Visão Computacional - VC)
 
 Esta seção é dedicada à coleta de imagens de exames cardiológicos, a matéria-prima para treinar modelos de visão computacional.
 
@@ -203,7 +208,81 @@ Esta seção é dedicada à coleta de imagens de exames cardiológicos, a matér
     * **ECG:** [ECG Images Dataset on Kaggle](https://www.kaggle.com/datasets/shayanfazeli/heartbeat)
     * **Raio-X de Tórax:** [NIH ChestX-ray Dataset](https://nihcc.app.box.com/v/ChestXray-NIHCC)
     * **Angiograma:** [Coronary Angiography Database on Kaggle](https://www.kaggle.com/datasets/suyashlakhani/cardiovascular-disease-dataset)
-* **Ferramentas (Próximos Passos):** OpenCV, TensorFlow, PyTorch.
+
+Claro! Aqui está o conteúdo do arquivo convertido para **Markdown** com ícones para incluir em um `README.md`:
 
 ---
+
+## 👁️ Como Algoritmos de Visão Computacional Analisam Imagens Médicas
+
+🧠 Fundamentalmente, um computador não vê uma imagem como nós. Ele a vê como uma gigantesca matriz de números, onde cada número representa a intensidade de um pixel. O trabalho da Visão Computacional (VC) é transformar essa matriz de números em insights clínicos. O principal "motor" por trás disso hoje são as **Redes Neurais Convolucionais (CNNs)**.
+
+👨‍⚕️ Imagine uma CNN como um médico residente em treinamento. O processo de aprendizado ocorre em etapas, muito similar às técnicas que você mencionou:
+
+---
+
+### 🔍 1. Identificação de Bordas e Texturas (As Lições Básicas)
+
+- **Como Funciona?** As primeiras camadas de uma CNN funcionam como um scanner de características básicas. Elas aplicam uma série de "filtros" (chamados de *kernels*) que varrem a imagem para encontrar elementos fundamentais:
+  - **📏 Bordas:** Linhas verticais, horizontais e diagonais.
+  - **🔲 Cantos:** Pontos onde as bordas se encontram.
+  - **🎨 Gradientes:** Mudanças de cor ou brilho.
+  - **🧵 Texturas:** Padrões repetitivos.
+
+#### 📌 Aplicação nas Nossas Imagens:
+
+- **🫁 Raio-X Torácico:** O algoritmo primeiro aprende a identificar as bordas nítidas das costelas, a curva suave do diafragma e o contorno que define a **silhueta do coração**.
+- **🩸 Angiograma:** Ele aprende a traçar as bordas dos vasos sanguíneos, distinguindo-os do fundo.
+- **📈 Eletrocardiograma (ECG):** Ele identifica as bordas e picos agudos do complexo QRS e as curvas mais suaves das ondas P e T.
+
+#### ✅ Importância:
+Sem essa etapa, a imagem é apenas um ruído de pixels. A identificação de bordas e padrões básicos é o que permite ao algoritmo **segmentar** a imagem, ou seja, entender onde um objeto (como o coração) termina e outro (como o pulmão) começa. É o alicerce de toda a compreensão visual.
+
+---
+
+### 🧩 2. Detecção de Padrões (Combinando as Lições)
+
+- **Como Funciona?** As camadas mais profundas da CNN pegam as características simples da etapa anterior e aprendem a combiná-las para formar padrões mais complexos. É como aprender que um círculo com dois pontos e uma linha curva abaixo forma um "rosto".
+
+#### 📌 Aplicação nas Nossas Imagens:
+
+- **🫁 Raio-X Torácico:** O algoritmo combina as bordas detectadas para reconhecer o padrão completo da "silhueta cardíaca" ou a "árvore brônquica" dos pulmões.
+- **🩸 Angiograma:** Ele aprende o padrão de uma artéria saudável (larga e com fluxo contínuo) em oposição a uma artéria doente.
+- **📈 Eletrocardiograma (ECG):** Ele aprende a reconhecer o padrão rítmico completo de um "batimento sinusal normal" (a sequência P-QRS-T que se repete).
+
+#### ✅ Importância:
+É aqui que o reconhecimento de objetos acontece. O algoritmo agora não vê apenas linhas e curvas, mas sim "coração", "artéria coronária" e "batimento cardíaco". Essa capacidade de reconhecer estruturas anatômicas é a base para qualquer diagnóstico automatizado.
+
+---
+
+### ⚠️ 3. Reconhecimento de Anomalias (O Diagnóstico)
+
+- **Como Funciona?** Depois de ter aprendido com milhares de imagens normais e anormais, a rede neural se torna uma especialista em "o que é normal". Uma anomalia é, essencialmente, uma quebra no padrão esperado. A etapa final é classificar a imagem ou uma parte dela com base nesses padrões.
+
+#### 📌 Aplicação nas Nossas Imagens:
+
+- **🫁 Raio-X Torácico:** O algoritmo mede o padrão da "silhueta cardíaca" que ele detectou. Se a proporção entre a largura do coração e a largura do tórax exceder um limiar aprendido (geralmente > 0.5), ele classifica a imagem como tendo **Cardiomegalia (coração aumentado)**, uma anomalia crítica.
+- **🩸 Angiograma:** Ao seguir o padrão de uma artéria, o algoritmo detecta um ponto onde as bordas se aproximam drasticamente e o fluxo de contraste diminui. Ele reconhece essa quebra de padrão como uma **estenose (obstrução)**.
+- **📈 Eletrocardiograma (ECG):** O algoritmo compara o padrão do batimento do paciente com o padrão "normal" que ele aprendeu. Se os picos R estiverem irregularmente espaçados, ele pode classificar a anomalia como **"Fibrilação Atrial"**.
+
+* **🔗 Links para as Imagens:**
+    * **[Imagens de Raio-X Torácico](https://drive.google.com/drive/folders/1Hi_ObZ0Vgg4QNZA1rOccGyzkBFApNtsn?usp=drive_link)**
+    * **[Imagens de Angiograma Coronário](https://drive.google.com/drive/folders/19wAqXGRr-Sx5h909gH4pZhW8MwC4SoOt?usp=drive_link)**
+    * **[Imagens de Eletrocardiograma (ECG)](https://drive.google.com/drive/folders/1FgA_sDv7jY53sg5c64__gpLbNS8qM9pN?usp=drive_link)**
+
+#### ✅ Importância:
+Este é o resultado final que impacta diretamente o cuidado ao paciente.
+
+- **🤝 Apoio à Decisão Clínica:** A IA pode funcionar como um sistema de triagem, analisando centenas de exames e destacando os mais suspeitos para que o médico os revise primeiro. Isso otimiza o tempo e reduz o risco de erros por fadiga.
+- **📊 Quantificação Objetiva:** Em vez de um médico dizer "parece um pouco aumentado", a IA pode fornecer uma medição precisa e reprodutível, permitindo um acompanhamento mais acurado da progressão da doença ao longo do tempo.
+- **🔬 Detecção Precoce:** Muitas vezes, as anomalias começam com mudanças de textura muito sutis em uma imagem, que o olho humano pode não notar. Uma IA treinada pode captar esses sinais precoces, levando a um diagnóstico mais rápido.
+
+---
+
+### ✅ Conclusão
+
+Em resumo, a Visão Computacional no seu projeto **CardioIA** transforma imagens de meros dados visuais em fontes ricas de informação diagnóstica, permitindo análises em uma escala e com uma precisão que complementam e potencializam a capacidade do especialista humano.
+
+---
+
 
