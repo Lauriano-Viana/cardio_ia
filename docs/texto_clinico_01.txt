@@ -1,0 +1,11 @@
+Título: Tratamento Não Medicamentoso e Medicamentoso da Hipertensão Arterial
+
+O tratamento não medicamentoso (TNM) é fundamental para a abordagem do paciente hipertenso e deve ser recomendado para todos, incluindo aqueles que necessitam de fármacos. As principais recomendações consistem em: alimentação saudável, consumo controlado de sódio, consumo moderado de álcool, prática regular de exercícios físicos, controle do peso e abandono do tabagismo.
+
+A alimentação saudável visa à proteção cardiovascular. Recomenda-se o padrão alimentar similar à dieta DASH (Dietary Approaches to Stop Hypertension), que enfatiza o consumo de frutas, hortaliças, laticínios com baixo teor de gordura e grãos integrais, e o baixo consumo de gorduras saturadas, gordura total e colesterol. A dieta DASH é rica em potássio, cálcio, magnésio e fibras. Outro padrão alimentar recomendado é o do tipo mediterrâneo, que também demonstrou reduzir a pressão arterial (PA) e o risco cardiovascular.
+
+O consumo excessivo de sódio está associado à elevação da PA. A recomendação é de, no máximo, 2g de sódio por dia, o que equivale a 5g de sal (cloreto de sódio). A redução do consumo de sal resulta em diminuição da PA e do risco de eventos cardiovasculares.
+
+O exercício físico regular é um pilar no tratamento da hipertensão. Recomenda-se a prática de, no mínimo, 150 minutos por semana de exercícios aeróbicos de intensidade moderada (como caminhada rápida, ciclismo, natação) ou 75 minutos por semana de exercícios de alta intensidade. Adicionalmente, exercícios de resistência (musculação) devem ser realizados em 2 ou 3 dias por semana.
+
+O tratamento medicamentoso é iniciado com base nos níveis de PA e no risco cardiovascular do paciente. Os anti-hipertensivos de primeira linha incluem os diuréticos tiazídicos, os bloqueadores dos canais de cálcio (BCC), os inibidores da enzima conversora de angiotensina (IECA) e os bloqueadores do receptor da angiotensina II (BRA). A escolha do fármaco inicial deve ser individualizada, considerando as comorbidades, a tolerabilidade e o custo. A monoterapia é eficaz em uma parcela dos pacientes, mas a maioria necessitará de terapia combinada para atingir as metas pressóricas.
