@@ -113,10 +113,10 @@ Esta parte do projeto lida com dados não estruturados na forma de textos. O obj
     * **Texto Clínico:** [Diretrizes Brasileiras de Hipertensão Arterial - SciELO](https://www.scielo.br/j/abc/a/Z6m5gGNQCvrW3WLV7csqbqh/?lang=pt)
     * **Texto de Saúde Pública:** [Ministério da Saúde - Ataque Cardíaco](http://bvsms.saude.gov.br/dicas-em-saude/2779-ataque-cardiaco-infarto)
     * **🔗 Link para o Arquivo:**
-     
-        **[texto_clinico_01.txt](docs/texto_clinico_01.txt)**
+
+            **[texto_clinico_01.txt](docs/texto_clinico_01.txt)**
         
-        **[texto_saudepublica_02.txt](docs/texto_saudepublica_02.txt)**
+            **[texto_saudepublica_02.txt](docs/texto_saudepublica_02.txt)**
 
 
 ## 🧠 Como Algoritmos de NLP Exploram os Textos e Por Que Isso é Relevante
@@ -211,9 +211,14 @@ Esta seção é dedicada à coleta de imagens de exames cardiológicos, a matér
     * **Raio-X de Tórax:** [NIH ChestX-ray Dataset](https://nihcc.app.box.com/v/ChestXray-NIHCC)
     * **Angiograma:** [Coronary Angiography Database on Kaggle](https://www.kaggle.com/datasets/suyashlakhani/cardiovascular-disease-dataset)
 
-Claro! Aqui está o conteúdo do arquivo convertido para **Markdown** com ícones para incluir em um `README.md`:
+    * **🔗 Links para as Imagens:**
 
----
+        **[Imagens de Raio-X Torácico](https://drive.google.com/drive/folders/1Hi_ObZ0Vgg4QNZA1rOccGyzkBFApNtsn?usp=drive_link)**
+
+        **[Imagens de Angiograma Coronário](https://drive.google.com/drive/folders/19wAqXGRr-Sx5h909gH4pZhW8MwC4SoOt?usp=drive_link)**
+        
+        **[Imagens de Eletrocardiograma (ECG)](https://drive.google.com/drive/folders/1FgA_sDv7jY53sg5c64__gpLbNS8qM9pN?usp=drive_link)**
+
 
 ## 👁️ Como Algoritmos de Visão Computacional Analisam Imagens Médicas
 
@@ -267,10 +272,6 @@ Sem essa etapa, a imagem é apenas um ruído de pixels. A identificação de bor
 - **🩸 Angiograma:** Ao seguir o padrão de uma artéria, o algoritmo detecta um ponto onde as bordas se aproximam drasticamente e o fluxo de contraste diminui. Ele reconhece essa quebra de padrão como uma **estenose (obstrução)**.
 - **📈 Eletrocardiograma (ECG):** O algoritmo compara o padrão do batimento do paciente com o padrão "normal" que ele aprendeu. Se os picos R estiverem irregularmente espaçados, ele pode classificar a anomalia como **"Fibrilação Atrial"**.
 
-* **🔗 Links para as Imagens:**
-    * **[Imagens de Raio-X Torácico](https://drive.google.com/drive/folders/1Hi_ObZ0Vgg4QNZA1rOccGyzkBFApNtsn?usp=drive_link)**
-    * **[Imagens de Angiograma Coronário](https://drive.google.com/drive/folders/19wAqXGRr-Sx5h909gH4pZhW8MwC4SoOt?usp=drive_link)**
-    * **[Imagens de Eletrocardiograma (ECG)](https://drive.google.com/drive/folders/1FgA_sDv7jY53sg5c64__gpLbNS8qM9pN?usp=drive_link)**
 
 #### ✅ Importância:
 Este é o resultado final que impacta diretamente o cuidado ao paciente.
