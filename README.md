@@ -13,7 +13,7 @@ Este documento serve como guia central, explicando os objetivos, as fontes de da
 
 ---
 
-## 📊 Parte 1 – Dados Numéricos (Análise Preditiva)
+# 📊 Parte 1 – Dados Numéricos (Análise Preditiva)
 
 Esta seção foca em dados estruturados, tipicamente provenientes de exames clínicos e medições de pacientes, que poderiam ser coletados por dispositivos (IoT) ou inseridos em prontuários eletrônicos.
 
@@ -101,7 +101,7 @@ O objetivo do projeto será usar todas as outras variáveis para prever este res
 
 ---
 
-## 📝 Parte 2 – Dados Textuais (Processamento de Linguagem Natural - NLP)
+# 📝 Parte 2 – Dados Textuais (Processamento de Linguagem Natural - NLP)
 
 Esta parte do projeto lida com dados não estruturados na forma de textos. O objetivo é extrair conhecimento e contexto que não estão presentes nos dados numéricos.
 
@@ -110,9 +110,88 @@ Esta parte do projeto lida com dados não estruturados na forma de textos. O obj
 * **Fontes Principais:**
     * **Texto Clínico:** [Diretrizes Brasileiras de Hipertensão Arterial - SciELO](https://www.scielo.br/j/abc/a/Z6m5gGNQCvrW3WLV7csqbqh/?lang=pt)
     * **Texto de Saúde Pública:** [Ministério da Saúde - Ataque Cardíaco](http://bvsms.saude.gov.br/dicas-em-saude/2779-ataque-cardiaco-infarto)
-* **Ferramentas (Próximos Passos):** NLTK, spaCy, Scikit-learn.
+
+
+## 🧠 Como Algoritmos de NLP Exploram os Textos e Por Que Isso é Relevante
+
+🧩 **Processamento de Linguagem Natural (PLN)**, ou *NLP* em inglês, é um campo da IA que ensina os computadores a entender e processar a linguagem humana. Pense nele como um tradutor entre o caos da nossa comunicação e a ordem lógica dos números que um computador entende.
+
+Vamos ver três técnicas poderosas e como elas se aplicam aos nossos textos:
 
 ---
+
+### 🔍 1. Extração de Entidades Nomeadas (Named Entity Recognition - NER)
+
+- **O que é?** É a técnica de treinar um algoritmo para identificar e classificar "entidades" — palavras ou grupos de palavras que representam conceitos específicos e predefinidos. É como dar ao computador "marcadores de texto" de cores diferentes para cada tipo de informação. A "extração de sintomas" que você mencionou é um caso de uso perfeito para NER.
+
+#### 📌 Aplicação nos nossos textos:
+
+- No `texto_clinico_01.txt`, um modelo de NER treinado para a área da saúde poderia extrair:
+  - **🦠 Doenças/Condições:** Hipertensão Arterial, risco cardiovascular
+  - **💊 Tratamentos (Não Medicamentosos):** alimentação saudável, dieta DASH, exercícios aeróbicos
+  - **💉 Medicamentos/Classes de Fármacos:** diuréticos tiazídicos, IECA, BRA
+  - **📊 Parâmetros Clínicos:** pressão arterial (PA)
+
+- No `texto_saudepublica_02.txt`, ele extrairia:
+  - **🦠 Doenças/Condições:** Infarto agudo do miocárdio, aterosclerose
+  - **🤒 Sintomas:** dor ou desconforto intenso na região do peito, falta de ar súbita, suor frio, náuseas, tontura
+  - **⚠️ Fatores de Risco:** hipertensão arterial, diabetes, colesterol elevado, tabagismo
+
+#### ✅ Por que é Relevante para a Saúde?
+
+- **📂 Estruturação de Dados:** Prontuários médicos são, em grande parte, texto livre. Um sistema de IA com NER pode "ler" a anotação de um médico e automaticamente extrair os sintomas, medicamentos prescritos e diagnósticos, transformando o texto não estruturado em dados organizados. Isso economiza um tempo imenso e alimenta os modelos preditivos com informações muito mais ricas.
+
+- **🤖 Triagem Inteligente:** Um chatbot de triagem poderia usar NER para identificar sintomas-chave na descrição de um paciente e, com base nisso, calcular um nível de urgência e recomendar a busca por atendimento.
+
+---
+
+### 🧩 2. Classificação de Tópicos (Topic Modeling)
+
+- **O que é?** É uma técnica não supervisionada que analisa um grande volume de textos e descobre, automaticamente, os principais temas ou "tópicos" abordados. O algoritmo agrupa palavras que frequentemente aparecem juntas para formar esses tópicos.
+
+#### 📌 Aplicação nos nossos textos:
+
+- Se tivéssemos centenas de documentos como os nossos, um modelo de classificação de tópicos poderia identificar, por exemplo:
+
+  - **📌 Tópico 1:** (palavras-chave: tratamento, medicamentoso, fármacos, IECA, diuréticos, PA) → **Tópico: Farmacologia da Hipertensão**
+  - **🥗 Tópico 2:** (palavras-chave: alimentação, exercício, sal, peso, dieta, estilo de vida) → **Tópico: Mudanças no Estilo de Vida e Prevenção**
+  - 🚑 **Tópico 3:** (palavras-chave: sintomas, dor, peito, infarto, atendimento, emergência, SAMU) → **Tópico: Reconhecimento e Resposta a Emergências Cardíacas**
+
+#### ✅ Por que é Relevante para a Saúde?
+
+- **📚 Análise de Literatura Científica:** Pesquisadores podem usar essa técnica para analisar milhares de artigos científicos e identificar rapidamente as principais linhas de pesquisa, tendências emergentes ou lacunas no conhecimento sobre uma doença.
+
+- **🏥 Inteligência Operacional em Hospitais:** Um hospital poderia analisar milhares de relatos de incidentes ou reclamações de pacientes para descobrir tópicos recorrentes (ex: "demora no atendimento", "problemas com medicação"), permitindo que a gestão atue de forma mais direcionada.
+
+---
+
+### 😊 3. Análise de Sentimentos
+
+- **O que é?** É o processo de determinar o tom emocional ou a polaridade (positivo, negativo, neutro) de um texto.
+
+#### 📌 Aplicação nos nossos textos:
+
+- Os textos que selecionamos são informativos e, portanto, seriam classificados como **neutros**.
+
+- No entanto, imagine que tivéssemos um terceiro tipo de texto: *reviews de pacientes sobre o atendimento em uma clínica cardiológica*.
+
+  - *"O Dr. Silva foi incrível, explicou tudo com calma e me senti muito seguro."* → **Sentimento: Positivo** 😊
+  - *"Esperei três horas para ser atendido e a recepção foi muito desorganizada."* → **Sentimento: Negativo** 😠
+
+#### ✅ Por que é Relevante para a Saúde?
+
+- **👥 Experiência do Paciente (Patient Experience):** Hospitais e clínicas podem monitorar mídias sociais ou formulários de feedback para medir a satisfação do paciente em tempo real, identificando pontos de atrito e melhorando a qualidade do serviço.
+
+- **🌍 Saúde Pública:** Governos podem usar a análise de sentimentos para medir a percepção pública sobre campanhas de vacinação, políticas de saúde ou o medo associado a uma epidemia, ajustando a comunicação para ser mais eficaz.
+
+---
+
+### ✅ Conclusão
+
+Em resumo, ao integrar o NLP, seu projeto **CardioIA** evolui. Ele deixa de ser apenas um sistema que olha para números e passa a ser um sistema que pode **ler, interpretar e contextualizar** a vasta quantidade de informação textual que permeia toda a área da saúde. É um passo crucial para construir soluções de IA verdadeiramente inteligentes e úteis.
+
+---
+
 
 ## 🖼️ Parte 3 – Dados Visuais (Visão Computacional - VC)
 
